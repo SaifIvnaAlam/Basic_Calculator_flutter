@@ -26,45 +26,79 @@ class _CalculatorPageState extends State<CalculatorPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                "Result",
-                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-              ),
-              Text(
-                result.toString(),
-                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+              Container(
+                height: 100,
+                width: double.infinity,
+                color: Colors.amber,
+                child: Column(
+                  children: [
+                    Text(
+                      "Result",
+                      style:
+                          TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      result.toString(),
+                      style:
+                          TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 40,
               ),
-              TextField(
-                controller: firstValue,
-                decoration: InputDecoration(hintText: "Enter the first Value"),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                height: 40,
+                width: 300,
+                color: Colors.grey,
+                child: TextField(
+                  controller: firstValue,
+                  decoration:
+                      InputDecoration(hintText: "Enter the first Value"),
+                ),
               ),
               SizedBox(
                 height: 40,
               ),
-              TextField(
-                controller: secondValue,
-                decoration: InputDecoration(hintText: "Enter the Second Value"),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                height: 40,
+                width: 300,
+                color: Colors.grey,
+                child: TextField(
+                  controller: secondValue,
+                  decoration:
+                      InputDecoration(hintText: "Enter the Second Value"),
+                ),
               ),
               SizedBox(
                 height: 40,
               ),
               MaterialButton(
+                minWidth: double.infinity,
                 onPressed: addition,
                 color: Colors.amber,
                 child: Text("Addition"),
               ),
               MaterialButton(
+                minWidth: double.infinity,
                 onPressed: addition,
                 color: Colors.amber,
                 child: Text("Substaction"),
               ),
               MaterialButton(
+                minWidth: double.infinity,
                 onPressed: addition,
                 color: Colors.amber,
                 child: Text("Division"),
+              ),
+              MaterialButton(
+                minWidth: double.infinity,
+                onPressed: addition,
+                color: Colors.amber,
+                child: Text("Multiply"),
               ),
             ],
           ),
